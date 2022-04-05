@@ -1,0 +1,351 @@
+html{
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*,*::after,*::before{
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+
+[class$="__contenedor"]{
+  max-width: 900px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+img{
+  max-width: 10%;
+  display: block;
+}
+
+.campo__email{
+  padding-left: 5px;
+  text-align: center;
+  outline: none;
+  width: 465px;
+  border-radius: 6px;
+  border: 1px solid #828282;
+}
+
+.campo__email::placeholder{
+  background-image: url(../img/baseline_email_black_24dp.png);
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+}
+
+.header{
+  margin-block: 1.5rem;
+}
+
+.header__titulo{
+  font-size: 2.4rem;
+  color: #4E5150;
+}
+
+@media (min-width: 768px) {
+  .header__titulo{
+    font-size: 3rem;
+  }
+}
+
+/* formulario */
+.formulario{
+  margin-top: 2rem;
+}
+
+.formulario__fieldset{
+  border: none;
+  margin-bottom: 2rem;
+  text-transform: capitalize;
+}
+
+.formulario__legend{
+  font-size: 1.4rem;
+  color: #333333;
+  margin-bottom: .7rem;
+}
+
+@media (min-width: 768px) {
+  .formulario__legend{
+    font-size: 1.8rem;
+  }
+}
+
+/* Labels e input */
+.campo__titulo{
+  display: block;
+  font-size: 1rem;
+  color: #4F4F4F;
+  margin-block: 5px;
+}
+
+@media (min-width: 768px) {
+  .campo__titulo{
+    font-size: 1.2rem;
+  }
+}
+
+.campo__input{
+  width: 33rem;
+  height: 4rem;
+  border-radius: 1rem;
+  padding-left: 4rem;
+  border: 1px solid #828282;
+  background-repeat: no-repeat;
+  background-position: .7rem;
+  background-size: 25px 25px;
+}
+
+.campo__input{
+  outline: none;
+}
+
+.campo__input:focus{
+  border: 1px solid #F2994A;
+}
+
+@media (min-width: 768px) {
+  .campo__input{
+    background-position: .5rem 1rem;
+    background-size: 30px 30px;
+  }
+}
+
+.campo__flex{
+  display: flex;
+  margin-top: 2rem;
+}
+
+.campo__flex-input{
+  transform: scale(1.4);
+}
+
+.campo__flex-nombre{
+  margin-left: 1rem;
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .campo__flex-nombre{
+    font-size: 1.2rem;
+  }
+}
+
+.campo__grid{
+  display: flex;
+  gap: 1rem;
+}
+
+
+
+/* Imagenes para los input */
+::placeholder{
+  color: #828282;
+  font-weight: 600;
+}
+.campo__input--email{
+  background-image: url(../img/email.png);
+}
+
+.campo__input--phone{
+  background-image: url(../img/phone.png);
+}
+
+.campo__input--name{
+  background-image: url(../img/name.png);
+}
+
+.campo__input--address{
+  background-image: url(../img/address.png);
+}
+
+.campo__input--city{
+  background-image: url(../img/city.png);
+}
+
+.campo__input--country{
+  background-image: url(../img/country.png);
+  width: 100%;
+}
+
+.campo__input--postal{
+  background-image: url(../img/postal-code.png);
+  width: 90%;
+}
+
+@media (min-width: 768px) {
+  .campo__grid{
+    display: unset;
+  }
+}
+
+/* Button */
+.campo__contenedor-enlace{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.campo__enlace{
+  all: unset;
+  text-decoration: none;
+  cursor: pointer;
+  color: #FFF;
+  font-size: 16px;
+  text-transform: capitalize;
+  background-color: #F2994A;
+  padding: 1.2rem 2.5rem;
+  border-radius: 1rem;
+  margin-block: 1rem;
+}
+
+@media (min-width: 768px) {
+  .campo__input{
+    width: 46rem;
+    height: 5rem;
+  }
+}
+
+
+@media (min-width: 480px) {
+  .principal{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  
+  .informacion{
+    order: -1;
+  }
+}
+
+.compras{
+  background-color: #F2F2F2;
+  padding: 2rem;
+  max-width: 33rem;
+  border-radius: 1.2rem;
+}
+
+.compras__flex{
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.compras__imagen{
+  max-width: 12.2rem;
+  max-height: 12.4rem;
+  border-radius: 1.2rem;
+}
+
+.compras__nombre{
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #4E5150;
+}
+
+@media (min-width: 768px) {
+  .compras__nombre{
+    font-size: 1.6rem;
+  }
+}
+
+.compras__precios{
+  display: flex;
+  margin-bottom: 2.5rem;
+}
+
+.compras__precio{
+  color: #F2994A;
+  font-size: 1.4rem;
+  margin-right: 2rem;
+}
+
+@media (min-width: 768px) {
+  .compras__precio{
+    font-size: 1.6rem;
+  }
+}
+
+.compras__precio--anterior{
+  font-size: 1rem;
+  color: #4E5150;
+  text-decoration: line-through;
+}
+
+@media (min-width: 768px) {
+  .compras__precio--anterior{
+    font-size: 1.2rem;
+  }
+}
+
+.compras__input{
+  height: 4.2rem;
+  width: 11rem;
+  border-radius: 1.2rem;
+  border: 1px solid #828282;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.total{
+  margin-top: 6rem;
+}
+
+.total__flex{
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #BDBDBD;
+  padding: 1rem;
+  font-size: 1.4rem;
+  color: #333;
+  text-transform: capitalize;
+}
+
+@media (min-width: 768px) {
+  .total__nombre{
+    font-size: 1.8rem;
+  }
+}
+
+/* Clases para JS */
+.formulario__alerta{
+  font-size: 1.4rem;
+  color: #FFF;
+  text-transform: uppercase;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 1rem;
+}
+
+@media (min-width: 768px) {
+  .formulario__alerta{
+    font-size: 1.8rem;
+  }
+}
+
+.formulario__alerta--correcto{
+  background-color: rgb(11, 208, 11);
+}
+
+.formulario__alerta--error,
+.compras__alerta--error{
+  background-color: red;
+}
+
+.compras__alerta{
+  font-size: 10px;
+  color: #FFF;
+  text-transform: uppercase;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+
+  display: none;
+}

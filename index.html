@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Page</title>
+  <link rel="shortcut icon" href="img/devchallenges.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+  <header class="header header__contenedor">
+    <h1 class="header__titulo">Checkout</h1>
+  </header>
+
+  <main class="principal principal__contenedor">
+    <section class="informe">
+
+      <div class="compras">
+        <div class="compras__flex">
+          <img src="img/photo1.png" alt="imagen compra" class="compras__imagen">
+
+          <div class="compras__informe">
+            <h2 class="compras__nombre">Vintage Backbag</h2>
+
+            <div class="compras__precios">
+              <p class="compras__precio" id="compras-precio-top">$54.99</p>
+              <p class="compras__precio--anterior">$94.99</p>
+            </div>
+
+            <p class="compras__alerta compras__alerta--error" id="compra-error">no hay mas en existencias</p>
+            <form class="compras__formulario">
+              <input 
+              id="precio-top"
+              type="number" 
+              class="compras__input" 
+              value="1">
+            </form>
+          </div>
+          <!--.compras__informe 1-->
+        </div>
+
+        <div class="compras__flex">
+            <img src="img/photo2.png" alt="imagen compra" class="compras__imagen">
+
+
+            <div class="compras__informe">
+              <h2 class="compras__nombre">Levi Shoes</h2>
+
+              <div class="compras__precios">
+                <p class="compras__precio" id="compras-precio-bottom">$74.99</p>
+                <p class="compras__precio--anterior" id="precio">$124.99</p>
+              </div>
+
+              <form class="compras__formulario">
+                <input 
+                id="precio-bottom"
+                type="number" 
+                class="compras__input" 
+                min="1" 
+                max="10" 
+                value="1">
+              </form>
+          </div>
+          <!--.compras__informe 2-->
+        </div>
+
+        <div class="total">
+          <div class="total__flex">
+            <p class="total__nombre">shipping</p>
+            <p class="total__total">$19</p>
+          </div>
+
+          <div class="total__flex">
+            <p class="total__nombre">total</p>
+            <p class="total__total">$148.98</p>
+          </div>
+        </div>
+      </div>
+      <!--.compras-->
+
+    </section>
+
+
+    <section class="informacion">
+      <form class="formulario" id="formulario">
+        
+        <fieldset class="formulario__fieldset">
+          <legend class="formulario__legend" id="legend">contact information</legend>
+          <div class="formulario__alerta" id="alertadiv"></div>
+          <div class="campo" id="campo">
+            <label for="email" class="campo__titulo">E-mail</label>
+            <input type="email" id="email" placeholder="Enter your email..." class="campo__input campo__input--email">
+          </div>
+
+          <div class="campo">
+            <label for="phone" class="campo__titulo">Phone</label>
+            <input type="number" id="phone" placeholder="Enter your phone..." class="campo__input campo__input--phone">
+          </div>
+        </fieldset>
+
+        <fieldset class="formulario__fieldset">
+          <legend class="formulario__legend">shiping address</legend>
+
+          <div class="campo">
+            <label for="name" class="campo__titulo">Full name</label>
+            <input type="text" id="name" placeholder="Enter your name..." class="campo__input campo__input--name">
+          </div>
+
+          <div class="campo">
+            <label for="address" class="campo__titulo">address</label>
+            <input type="text" id="address" placeholder="Your address..." class="campo__input campo__input--address">
+          </div>
+
+          <div class="campo">
+            <label for="city" class="campo__titulo">city</label>
+            <input type="text" id="city" placeholder="Your city..." class="campo__input campo__input--city">
+          </div>
+
+          <div class="campo">
+            <div class="campo__grid">
+              <div class="campo1">
+                <label for="country" class="campo__titulo">Country</label>
+                <!-- <input list="countries" placeholder="Your country..." id="country"
+                  class="campo__input campo__input--country"> -->
+                <select id="country" class="campo__input campo__input--country">
+                  <option value="" selected disabled> Your Country...</option>
+                  <option value="HN">Honduras</option>
+                  <option value="MX">Mexico</option>
+                  <option value="ARG">Argentina</option>
+                  <option value="ES">Spain</option>
+                </select>
+              </div>
+
+              <div class="campo2">
+                <label for="postal-code" class="campo__titulo">postal code</label>
+                <input type="number" id="postal-code" placeholder="Your postal code"
+                  class="campo__input campo__input--postal">
+              </div>
+            </div>
+          </div>
+          <div class="campo__flex">
+            <input type="checkbox" class="campo__flex-input">
+            <p class="campo__flex-nombre">Save your information for next time</p>
+          </div>
+
+          <div class="campo__contenedor-enlace">
+            <button type="submit" class="campo__enlace">continue</button>
+          </div>
+        </fieldset>
+
+
+      </form>
+    </section>
+
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
